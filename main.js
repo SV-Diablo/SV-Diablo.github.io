@@ -25,7 +25,35 @@
 
   // Email built at runtime so simple scrapers don't harvest it from the HTML.
   var address = ['ebastian004', 'gmail.com'].join('@');
+  var subjects = { es: 'Contacto desde tu portafolio', en: 'Contact from your portfolio' };
+
+  // Opens Gmail's compose window in a new tab instead of the OS mail client.
+  function gmailUrl() {
+    var lang = root.getAttribute('lang') === 'en' ? 'en' : 'es';
+    return 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(address) +
+      '&su=' + encodeURIComponent(subjects[lang]);
+  }
   document.querySelectorAll('.js-mail').forEach(function (a) {
-    a.setAttribute('href', 'mailto:' + address);
+    a.setAttribute('href', gmailUrl());
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+    a.addEventListener('click', function () { a.setAttribute('href', gmailUrl()); });
   });
+
+  // Fallback for visitors who don't use Gmail: copy the address.
+  var copy = document.querySelector('.js-copy');
+  if (copy) {
+    copy.hidden = false;
+    copy.addEventListener('click', function () {
+      var done = function () {
+        copy.classList.add('copied');
+        setTimeout(function () { copy.classList.remove('copied'); }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(address).then(done, function () { window.prompt('', address); });
+      } else {
+        window.prompt('', address);
+      }
+    });
+  }
 })();
