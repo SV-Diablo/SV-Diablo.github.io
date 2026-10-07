@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sebastian Villaseca · DevSecOps & AppSec</title>
+<meta name="description" content="Sebastian Villaseca: ingeniero DevSecOps y seguridad de aplicaciones. Proyectos, laboratorios y write-ups de seguridad.">
+<meta name="author" content="Sebastian Villaseca">
+<meta property="og:title" content="Sebastian Villaseca · DevSecOps & AppSec">
+<meta property="og:description" content="Construyo software, lo llevo a producción y lo aseguro.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b6e6e'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='white' text-anchor='middle'>SV</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sebastian Villaseca",
+  "jobTitle": "DevSecOps & Application Security Engineer",
+  "address": {"@type": "PostalAddress", "addressLocality": "Valparaíso", "addressCountry": "CL"},
+  "alumniOf": "Universidad Viña del Mar",
+  "sameAs": ["https://www.linkedin.com/in/sebastian-villaseca-19135523a", "https://github.com/SV-Diablo"],
+  "knowsAbout": ["Application Security", "DevSecOps", "Vulnerability Management", "Wazuh", "SQL Server", "OWASP", "ISO 27001"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main"><span class="es">Saltar al contenido</span><span class="en">Skip to content</span></a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">sv<span class="cursor">_</span></a>
+    <nav aria-label="Principal">
+      <a href="#proyectos"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+      <a href="#trayectoria"><span class="es">Trayectoria</span><span class="en">Experience</span></a>
+      <a href="#certificaciones"><span class="es">Certificaciones</span><span class="en">Certifications</span></a>
+      <a href="#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a>
+    </nav>
+    <button class="lang" type="button" aria-label="Cambiar idioma / Switch language">
+      <span class="es">EN</span><span class="en">ES</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="kicker mono">DevSecOps · Application Security · Infraestructura</p>
+      <h1>Sebastian Villaseca</h1>
+      <p class="lead">
+        <span class="es">Construyo software, lo llevo a producción y lo aseguro: desde el hardening de servidores y la operación de un SIEM hasta auditorías de código y arquitectura.</span>
+        <span class="en">I build software, ship it to production and secure it: from server hardening and SIEM operations to code and architecture audits.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#proyectos"><span class="es">Ver proyectos</span><span class="en">See projects</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/sebastian-villaseca-19135523a" rel="noopener" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/SV-Diablo" rel="noopener" target="_blank">GitHub</a>
+        <a class="btn js-mail" href="#contacto"><span class="es">Escríbeme</span><span class="en">Email me</span></a>
+      </div>
+
+      <ul class="metrics" aria-label="Logros">
+        <li>
+          <strong class="mono">0 downtime</strong>
+          <span class="es">durante el CyberDay en plataformas que migré, validadas con pruebas de carga y estrés.</span>
+          <span class="en">during CyberDay, Chile's largest online sales event, on platforms I migrated and load-tested.</span>
+        </li>
+        <li>
+          <strong class="mono">100%</strong>
+          <span class="es">de las vulnerabilidades altas y críticas cerradas en 2 semanas en más de 50 equipos.</span>
+          <span class="en">of high and critical vulnerabilities closed in 2 weeks across 50+ endpoints.</span>
+        </li>
+        <li>
+          <strong class="mono">+250</strong>
+          <span class="es">equipos on-premise bajo gestión de vulnerabilidades en entornos industriales regulados.</span>
+          <span class="en">on-premise hosts under vulnerability management in regulated industrial environments.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="proyectos" class="block">
+    <div class="wrap">
+      <h2><span class="es">Proyectos y laboratorios</span><span class="en">Projects and labs</span></h2>
+      <p class="sub">
+        <span class="es">Trabajo propio, con datos ficticios o aplicaciones vulnerables de práctica. Nada de clientes ni de sistemas reales.</span>
+        <span class="en">My own work, built on fictional data or intentionally vulnerable practice apps. No client or production systems.</span>
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <span class="tag mono">DevSecOps</span>
+            <span class="status done"><span class="es">Publicado</span><span class="en">Live</span></span>
+          </div>
+          <h3><span class="es">Pipeline DevSecOps de referencia</span><span class="en">Reference DevSecOps pipeline</span></h3>
+          <p>
+            <span class="es">Pipeline en GitHub Actions que bloquea un pull request si introduce código inseguro, un secreto expuesto o una dependencia vulnerable. Un PR de demostración con tres fallas plantadas queda bloqueado por cuatro controles distintos.</span>
+            <span class="en">GitHub Actions pipeline that blocks a pull request introducing insecure code, a leaked secret or a vulnerable dependency. A demo PR with three planted flaws is blocked by four separate controls.</span>
+          </p>
+          <ul class="stack mono"><li>CodeQL</li><li>Gitleaks</li><li>pip-audit</li><li>Dependency review</li><li>SHA pinning</li></ul>
+          <div class="links">
+            <a href="https://github.com/SV-Diablo/devsecops-pipeline" rel="noopener" target="_blank"><span class="es">Repositorio</span><span class="en">Repository</span> →</a>
+            <a href="https://github.com/SV-Diablo/devsecops-pipeline/pull/3" rel="noopener" target="_blank"><span class="es">PR bloqueado</span><span class="en">Blocked PR</span> →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag mono">Blue team</span>
+            <span class="status"><span class="es">En desarrollo</span><span class="en">In progress</span></span>
+          </div>
+          <h3><span class="es">Laboratorio de detección con Wazuh</span><span class="en">Wazuh detection lab</span></h3>
+          <p>
+            <span class="es">Despliegue reproducible de Wazuh con Docker, agentes Linux y Windows, y ataques simulados con Atomic Red Team para documentar qué se detecta y cómo afinar las reglas.</span>
+            <span class="en">Reproducible Wazuh deployment with Docker, Linux and Windows agents, and simulated attacks with Atomic Red Team to document what gets detected and how to tune rules.</span>
+          </p>
+          <ul class="stack mono"><li>Wazuh</li><li>Docker</li><li>Atomic Red Team</li><li>MITRE ATT&amp;CK</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag mono">AppSec</span>
+            <span class="status"><span class="es">En desarrollo</span><span class="en">In progress</span></span>
+          </div>
+          <h3><span class="es">Auditoría de ejemplo: OWASP Juice Shop</span><span class="en">Sample audit: OWASP Juice Shop</span></h3>
+          <p>
+            <span class="es">Informe completo sobre una aplicación vulnerable de práctica: hallazgos con CVSS 3.1, mapeo a OWASP Top 10 y CWE, resumen ejecutivo para gerencia y plan de remediación por fases.</span>
+            <span class="en">Full report on an intentionally vulnerable app: findings scored with CVSS 3.1, mapped to OWASP Top 10 and CWE, an executive summary and a phased remediation plan.</span>
+          </p>
+          <ul class="stack mono"><li>Burp Suite</li><li>CVSS 3.1</li><li>OWASP</li><li>CWE</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag mono">Offensive</span>
+            <span class="status"><span class="es">En curso</span><span class="en">Ongoing</span></span>
+          </div>
+          <h3><span class="es">Write-ups de PortSwigger Academy</span><span class="en">PortSwigger Academy write-ups</span></h3>
+          <p>
+            <span class="es">Notas de los laboratorios que resuelvo mientras preparo la certificación BSCP: la vulnerabilidad, cómo la exploté y cómo se corrige en el código.</span>
+            <span class="en">Notes on the labs I solve while preparing for the BSCP: the vulnerability, how I exploited it and how to fix it in code.</span>
+          </p>
+          <ul class="stack mono"><li>Burp Suite</li><li>SQLi</li><li>XSS</li><li>Access control</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trayectoria" class="block alt">
+    <div class="wrap">
+      <h2><span class="es">Trayectoria</span><span class="en">Experience</span></h2>
+      <ol class="timeline">
+        <li>
+          <span class="when mono">2026 →</span>
+          <div>
+            <h3>Backend Developer / Software Architect · Capital Inteligente</h3>
+            <p>
+              <span class="es">Seguridad de infraestructura (Active Directory, Wazuh, firewall, políticas) y arquitectura y seguridad de plataformas SaaS multi-tenant.</span>
+              <span class="en">Infrastructure security (Active Directory, Wazuh, firewall, policies) plus architecture and security of multi-tenant SaaS platforms.</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">2023 – 2026</span>
+          <div>
+            <h3><span class="es">Analista de Ciberseguridad e Infraestructura · EDSA</span><span class="en">Cybersecurity &amp; Infrastructure Analyst · EDSA</span></h3>
+            <p>
+              <span class="es">Gestión de vulnerabilidades, hardening y operación de SIEM en infraestructura on-premise de entornos industriales regulados.</span>
+              <span class="en">Vulnerability management, hardening and SIEM operations on on-premise infrastructure in regulated industrial environments.</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">2022 – 2026</span>
+          <div>
+            <h3><span class="es">Desarrollador de Software · EDSA</span><span class="en">Software Developer · EDSA</span></h3>
+            <p>
+              <span class="es">Sistemas satélite de ERP en Java, .NET y SQL Server; gestión de releases y pipelines en Azure DevOps.</span>
+              <span class="en">ERP satellite systems in Java, .NET and SQL Server; release management and Azure DevOps pipelines.</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">2020 →</span>
+          <div>
+            <h3>VILLANO Technologies</h3>
+            <p>
+              <span class="es">Mi consultora: desarrollo a medida y, desde 2022, auditorías externas de seguridad y arquitectura.</span>
+              <span class="en">My consultancy: custom development and, since 2022, external security and architecture audits.</span>
+            </p>
+          </div>
+        </li>
+      </ol>
+      <p class="skills mono">AppSec · Wazuh · SQL Server · PostgreSQL · Linux · Windows Server · Active Directory · Azure DevOps · Java · .NET · Python · TypeScript · ISO 27001</p>
+    </div>
+  </section>
+
+  <section id="certificaciones" class="block">
+    <div class="wrap">
+      <h2><span class="es">Certificaciones</span><span class="en">Certifications</span></h2>
+      <ul class="certs">
+        <li>
+          <a href="https://www.credly.com/badges/f106b616-ab1b-467e-96df-f9900749d23b/public_url" rel="noopener" target="_blank">Ethical Hacker</a>
+          <span class="meta">Cisco Networking Academy · 2026</span>
+        </li>
+        <li>
+          <span>Cyber Threat Management</span>
+          <span class="meta">Cisco Networking Academy</span>
+        </li>
+        <li class="next">
+          <span>Burp Suite Certified Practitioner (BSCP)</span>
+          <span class="meta"><span class="es">En preparación</span><span class="en">In preparation</span></span>
+        </li>
+        <li class="next">
+          <span>GitHub Advanced Security</span>
+          <span class="meta"><span class="es">En preparación</span><span class="en">In preparation</span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" class="block alt">
+    <div class="wrap contact">
+      <h2><span class="es">Contacto</span><span class="en">Contact</span></h2>
+      <p>
+        <span class="es">Abierto a roles de AppSec, seguridad de infraestructura y DevSecOps, remotos o híbridos.</span>
+        <span class="en">Open to remote or hybrid AppSec, infrastructure security and DevSecOps roles.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary js-mail" href="#contacto"><span class="es">Escríbeme</span><span class="en">Email me</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/sebastian-villaseca-19135523a" rel="noopener" target="_blank">LinkedIn</a>
+      </div>
+      <noscript><p class="meta">ebastian004 [at] gmail [dot] com</p></noscript>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p class="mono">© 2026 Sebastian Villaseca · Valparaíso, Chile</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
