@@ -1,31 +1,19 @@
+/* Identity: black and green, always dark. */
 :root {
-  --bg: #fbfcfc;
-  --bg-alt: #f1f5f5;
-  --surface: #ffffff;
-  --ink: #142028;
-  --muted: #56636d;
-  --rule: #dce3e6;
-  --accent: #0b6e6e;
-  --accent-ink: #ffffff;
-  --accent-soft: #e3f1f1;
-  --warn: #8a5a00;
-  --warn-soft: #fbf0d6;
+  color-scheme: dark;
+  --bg: #070a07;
+  --bg-alt: #0c110c;
+  --surface: #111811;
+  --ink: #e6efe6;
+  --muted: #98a898;
+  --rule: #1f2b1f;
+  --accent: #4ccf5e;
+  --accent-ink: #041204;
+  --accent-soft: #12301a;
+  --warn: #e8c15a;
+  --warn-soft: #2e2710;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0d1418;
-    --bg-alt: #111b20;
-    --surface: #152127;
-    --ink: #e4ecef;
-    --muted: #9aabb3;
-    --rule: #24343c;
-    --accent: #3fb6b2;
-    --accent-ink: #06201f;
-    --accent-soft: #133331;
-    --warn: #f0c36a;
-    --warn-soft: #33290f;
-  }
-}
+.hero { background: radial-gradient(ellipse 70% 90% at 30% 20%, #133a17 0%, transparent 70%); }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
