@@ -55,6 +55,7 @@ nav a:hover { color: var(--ink); }
 .kicker { color: var(--accent); font-size: 14px; letter-spacing: 0.04em; margin: 0 0 12px; }
 .hero h1 { font-size: clamp(36px, 6vw, 56px); letter-spacing: -0.02em; font-weight: 700; }
 .lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 680px; margin: 16px 0 28px; }
+.principle { color: var(--accent); font-size: 15px; margin: -12px 0 28px; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn { display: inline-block; padding: 10px 18px; border-radius: 8px; border: 1px solid var(--rule); color: var(--ink); text-decoration: none; font-weight: 500; font-size: 15px; background: var(--surface); }
 .btn:hover { border-color: var(--accent); }
